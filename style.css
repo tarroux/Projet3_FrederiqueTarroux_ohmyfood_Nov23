@@ -1,0 +1,89 @@
+/***** Import Family *****/
+/* Title Restaurant : Shrikhand */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Font Family All */
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/***** All param *****/
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0 15px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Variables */
+/* Background color */
+/* Font color */
+/* Icon color */
+/* Badge and line green */
+/* Font family -> All mixin */
+/* Mixin position for all media */
+/* Button -> All mixin */
+/* ######## Code Page ######## */
+/* Logo */
+header img {
+  width: 197px;
+  padding: 20px 0;
+}
+
+/* Localisation */
+.localisation {
+  width: 120%;
+  height: 50px;
+  background-color: #EAEAEA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+}
+.localisation svg {
+  width: 12px;
+  height: 16px;
+}
+.localisation input {
+  width: 109px;
+  background-color: #EAEAEA;
+  border: none;
+}
+.localisation input::placeholder {
+  color: #353535;
+}
+
+.presentation {
+  width: 110%;
+  padding: 35px 60px;
+  text-align: center;
+  background-color: #f6f6F6;
+}
+.presentation h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 50px;
+}
+.presentation h2 {
+  font-size: 18px;
+  font-weight: 300;
+  padding: 15px 15px;
+}
+.presentation button {
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(#ff79da, #9356DC);
+  color: #ffffff;
+  padding: 13px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

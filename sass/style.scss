@@ -1,0 +1,120 @@
+/***** Import Family *****/
+/* Title Restaurant : Shrikhand */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Font Family All */
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/***** All param *****/
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0 15px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;;
+}
+
+/* Variables */
+/* Background color */
+$background-white: #ffffff;
+$background-very-light-grey: #f6f6F6;
+$background-soft-grey: #EAEAEA;
+$background-footer-grey: #353535;
+
+/* Font color */
+$font-grey: #353535;
+$font-black: #000000;
+$font-white: #ffffff;
+
+/* Icon color */
+$icon-purple-color: #9356DC;
+$icon-grey: #7E7E7E;
+
+/* Badge and line green */
+$line-green: #99E2D0;
+$badge-green:  #99E2D0;
+
+/* Font family -> All mixin */
+@mixin font-big-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Mixin position for all media */
+@mixin header-homePage-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button -> All mixin */
+@mixin purple-button {
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(#ff79da, #9356DC);
+    color: $font-white;
+    padding: 13px;
+    border: none;
+}
+
+/* ######## Code Page ######## */
+
+/* Logo */
+header img {
+    width: 197px;
+    padding: 20px 0;
+}
+
+/* Localisation */
+.localisation {
+    width: 120%;
+    height: 50px;
+    background-color: $background-soft-grey;
+    @include header-homePage-position;
+    gap: 17px;
+
+    svg {
+        width: 12px;
+        height: 16px;
+    }
+
+    input {
+        width: 109px;
+        background-color: $background-soft-grey;
+        border: none;
+    }
+    input::placeholder {
+        color: $font-grey;
+    }
+}
+
+.presentation {
+    width: 110%;
+    padding: 35px 60px;
+    text-align: center;
+    background-color: $background-very-light-grey;
+
+    h1 {
+        @include font-big-title;
+        margin: 0;
+        padding: 0 50px;
+    }
+    h2 {
+        font-size: 18px;
+        font-weight: 300;
+        padding: 15px 15px;
+    }
+
+    button {
+        @include purple-button;
+        margin-bottom: 15px;
+    }
+}
