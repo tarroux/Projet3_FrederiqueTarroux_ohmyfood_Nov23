@@ -7,13 +7,13 @@
 
 /***** All param *****/
 html {
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
     margin: 0;
-    padding: 0 15px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@ body {
     font-family: 'Roboto', sans-serif;;
 }
 
-/* Variables */
+/***** ALL Variables *****/
 /* Background color */
 $background-white: #ffffff;
 $background-very-light-grey: #f6f6F6;
@@ -49,11 +49,13 @@ $badge-green:  #99E2D0;
 }
 
 /* Mixin position for all media */
-@mixin header-homePage-position {
+@mixin Page-position {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 
 /* Button -> All mixin */
 @mixin purple-button {
@@ -65,6 +67,64 @@ $badge-green:  #99E2D0;
     border: none;
 }
 
+/* Card -> All mixin */
+@mixin small-card {
+    width: 322px;
+    height: 72.4px;
+    border-radius: 20px;
+    background-color: $background-very-light-grey;
+    border: none;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+
+    .purple-number {
+        width: 24px;
+        height: 24px;
+        border-radius: 20px;
+        background-color: $icon-purple-color;
+        color: $font-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    svg {
+        padding: 0 20px 0 25px;
+    }
+
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+        color: $font-black;
+    }
+}
+
+@mixin big-card {
+    width: 90%;
+    height: 251px;
+    border-radius: 15px;
+
+    img {
+        width: 100%;
+        height: 70%;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+    }
+
+    h2 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: 300;
+    }
+}
+
 /* ######## Code Page ######## */
 
 /* Logo */
@@ -73,12 +133,13 @@ header img {
     padding: 20px 0;
 }
 
-/* Localisation */
+/* Section : Localisation */
 .localisation {
-    width: 120%;
+    width: 100%;
     height: 50px;
     background-color: $background-soft-grey;
-    @include header-homePage-position;
+    @include Page-position;
+    flex-direction: row;
     gap: 17px;
 
     svg {
@@ -95,17 +156,17 @@ header img {
         color: $font-grey;
     }
 }
-
+/* Section : Présentation */
 .presentation {
-    width: 110%;
-    padding: 35px 60px;
+    width: 100%;
+    padding: 35px 0;
     text-align: center;
     background-color: $background-very-light-grey;
 
     h1 {
         @include font-big-title;
         margin: 0;
-        padding: 0 50px;
+        padding: 0 20px;
     }
     h2 {
         font-size: 18px;
@@ -116,5 +177,45 @@ header img {
     button {
         @include purple-button;
         margin-bottom: 15px;
+    }
+}
+
+/* Section : Fonctionnement */
+.fonctionnement {
+    margin: 25px 0;
+    @include Page-position;
+    h1 {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .small-card {
+        margin: 15px 0;
+        @include small-card;
+    }
+}
+
+.small-card {
+    width: 322px;
+    position: relative;
+}
+.purple-number {
+    position: absolute;
+    left: -4%;
+}
+
+/* Section Restaurants */
+.restaurants {
+    @include Page-position;
+    background-color: $background-very-light-grey;
+
+    h1 {
+        @include font-big-title;
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .big-card {
+        @include big-card;
     }
 }
