@@ -28,11 +28,13 @@ $background-white: #ffffff;
 $background-very-light-grey: #f6f6F6;
 $background-soft-grey: #EAEAEA;
 $background-footer-grey: #353535;
+$background-green: #99E2D0;
 
 /* Font color */
 $font-grey: #353535;
 $font-black: #000000;
 $font-white: #ffffff;
+$font-green: #008766;
 
 /* Icon color */
 $icon-purple-color: #9356DC;
@@ -69,7 +71,7 @@ $badge-green:  #99E2D0;
 
 /* Card -> All mixin */
 @mixin small-card {
-    width: 322px;
+    width: 90%;
     height: 72.4px;
     border-radius: 20px;
     background-color: $background-very-light-grey;
@@ -114,15 +116,38 @@ $badge-green:  #99E2D0;
         object-fit: cover;
     }
 
-    h2 {
-        font-size: 18px;
-        font-weight: 700;
+    .new-restaurant {
+        width: 80px;
+        height: 29px;
+        background-color: $background-green;
+        color: $font-green;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 2px;
     }
 
-    p {
-        font-size: 17px;
-        font-weight: 300;
+    .card-content {
+        height: 20%;
+        padding: 10px;
+        background-color: $background-white;
+        border-radius: 0 0 15px 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    
+        p {
+            font-size: 17px;
+            font-weight: 300;
+        }
+        
     }
+ 
 }
 
 /* ######## Code Page ######## */
@@ -157,6 +182,9 @@ header img {
     }
 }
 /* Section : Présentation */
+main {
+    width: 100%;
+}
 .presentation {
     width: 100%;
     padding: 35px 0;
@@ -182,6 +210,7 @@ header img {
 
 /* Section : Fonctionnement */
 .fonctionnement {
+    width: 100%;
     margin: 25px 0;
     @include Page-position;
     h1 {
@@ -195,19 +224,32 @@ header img {
     }
 }
 
+/* Position chiffre sur small-card */
 .small-card {
-    width: 322px;
     position: relative;
+    display: inline-block;
 }
+
+.small-card div {
+    width: 100%;
+    display: block;
+}
+
 .purple-number {
     position: absolute;
-    left: -4%;
+    left: -2%;
 }
 
 /* Section Restaurants */
 .restaurants {
+    width: 100%;
+    padding: 25px 0 25px;
     @include Page-position;
     background-color: $background-very-light-grey;
+
+    .new-restaurant {
+        @include Page-position;
+    }
 
     h1 {
         @include font-big-title;
@@ -217,5 +259,54 @@ header img {
     }
     .big-card {
         @include big-card;
+        margin-bottom: 20px;
+    }
+}
+
+/* Position mention nouveau restaurant */
+.big-card {
+    position: relative;
+    display: inline-block;
+}
+
+.big-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.new-restaurant {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: $background-footer-grey;
+    
+    .footer-content {
+        width: 89%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 22px;
+    }
+
+    h1 {
+        width: 70%;
+        font-family: 'Shrikhand';
+        font-size: 18px;
+        font-weight: 400;
+        color: $font-white;
+    }
+
+    a {
+        width: 70%;
+        color: $font-white;
+        font-size: 16px;
+        font-weight: 500;
     }
 }
