@@ -12,14 +12,16 @@ html {
     padding: 0;
 }
 
-body {
+body,
+main {
     margin: 0;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
 
 /***** ALL Variables *****/
@@ -80,7 +82,6 @@ $badge-green:  #99E2D0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    text-align: center;
 
     .purple-number {
         width: 24px;
@@ -94,13 +95,18 @@ $badge-green:  #99E2D0;
     }
 
     svg {
-        padding: 0 20px 0 25px;
+        padding: 0 20px 0 35px;
     }
 
     h2 {
         font-size: 16px;
         font-weight: 500;
         color: $font-black;
+    }
+    
+    @media screen and (min-width:1075px) {
+        width: 322px;
+        margin: 0 18px;
     }
 }
 
@@ -139,15 +145,17 @@ $badge-green:  #99E2D0;
         h2 {
             font-size: 18px;
             font-weight: 700;
+            margin: 0 0 5px;
         }
     
         p {
             font-size: 17px;
             font-weight: 300;
+            margin: 0;
         }
         
     }
- 
+
 }
 
 /* ######## Code Page ######## */
@@ -181,10 +189,8 @@ header img {
         color: $font-grey;
     }
 }
+
 /* Section : Présentation */
-main {
-    width: 100%;
-}
 .presentation {
     width: 100%;
     padding: 35px 0;
@@ -211,16 +217,38 @@ main {
 /* Section : Fonctionnement */
 .fonctionnement {
     width: 100%;
+    max-width: 1110px;
     margin: 25px 0;
     @include Page-position;
+
     h1 {
         width: 90%;
         display: flex;
-        justify-content: flex-start;
+    }
+
+    .fonctionnement-change-position {
+        width: 100%;
+        @include Page-position;
     }
     .small-card {
+        width: 100%;
         margin: 15px 0;
         @include small-card;
+    }
+    
+    @media screen and (min-width: 1075px) {
+        h1 {
+            width: 98%;
+        }
+
+        .fonctionnement-change-position {
+            flex-direction: row;
+            gap: 25px;
+        }
+
+        .small-card {
+            width: 322px;
+        }
     }
 }
 
@@ -247,19 +275,44 @@ main {
     @include Page-position;
     background-color: $background-very-light-grey;
 
+    .restaurants-change-position {
+        width: 100%;
+        @include Page-position;
+    }
+    
     .new-restaurant {
         @include Page-position;
     }
 
     h1 {
         @include font-big-title;
-        width: 90%;
-        display: flex;
-        justify-content: flex-start;
+        width: 90%
     }
+
     .big-card {
         @include big-card;
         margin-bottom: 20px;
+    }
+    
+    @media screen and (min-width: 1075px) {
+
+        .restaurant-title-desktop {
+            width: 100%;
+            max-width: 1080px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .restaurants-change-position {
+            flex-direction: row;
+            gap: 100px;
+        }
+
+        .big-card {
+            min-width: 340px;
+            max-width: 490px;
+        }
     }
 }
 
@@ -290,13 +343,33 @@ footer {
         width: 89%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        margin: 22px;
+    }
+
+    .footer-desktop-reverse {
+        width: auto;
+        display: flex;
+        flex-direction: column;
         gap: 16px;
-        padding: 22px;
+    }
+
+    .footer-content a {
+        width: auto;
+        max-width: 190px; 
+    }
+    
+    .footer-link {
+        display: flex;
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    .footer-content a svg {
+        padding-right: 10px;
     }
 
     h1 {
-        width: 70%;
         font-family: 'Shrikhand';
         font-size: 18px;
         font-weight: 400;
@@ -304,9 +377,45 @@ footer {
     }
 
     a {
-        width: 70%;
         color: $font-white;
         font-size: 16px;
         font-weight: 500;
+        text-decoration: none;
+    }
+
+    @media screen and (min-width: 1075px) {
+        footer {
+            height: 54px;
+            padding: 30px 25px;
+        }
+
+        .footer-content h1 {
+            margin: 0;
+            padding: 0 20px 0 40px;
+        }
+
+        .footer-content {
+            width: 95%;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+
+        .footer-desktop-reverse {
+            height: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .footer-link {
+            flex-direction: row;
+            padding: 0 35px 0 15px;
+        }
+
+        .footer-content a {
+            width: auto;
+            height: 20px;
+        }
     }
 }

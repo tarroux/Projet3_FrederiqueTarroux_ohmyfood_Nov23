@@ -12,8 +12,10 @@ html {
   padding: 0;
 }
 
-body {
+body,
+main {
   margin: 0;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -64,10 +66,6 @@ header img {
 }
 
 /* Section : Présentation */
-main {
-  width: 100%;
-}
-
 .presentation {
   width: 100%;
   padding: 35px 0;
@@ -98,6 +96,7 @@ main {
 /* Section : Fonctionnement */
 .fonctionnement {
   width: 100%;
+  max-width: 1110px;
   margin: 25px 0;
   display: flex;
   flex-direction: column;
@@ -107,9 +106,16 @@ main {
 .fonctionnement h1 {
   width: 90%;
   display: flex;
-  justify-content: flex-start;
+}
+.fonctionnement .fonctionnement-change-position {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .fonctionnement .small-card {
+  width: 100%;
   margin: 15px 0;
   width: 90%;
   height: 72.4px;
@@ -120,7 +126,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  text-align: center;
 }
 .fonctionnement .small-card .purple-number {
   width: 24px;
@@ -133,12 +138,30 @@ main {
   justify-content: center;
 }
 .fonctionnement .small-card svg {
-  padding: 0 20px 0 25px;
+  padding: 0 20px 0 35px;
 }
 .fonctionnement .small-card h2 {
   font-size: 16px;
   font-weight: 500;
   color: #000000;
+}
+@media screen and (min-width: 1075px) {
+  .fonctionnement .small-card {
+    width: 322px;
+    margin: 0 18px;
+  }
+}
+@media screen and (min-width: 1075px) {
+  .fonctionnement h1 {
+    width: 98%;
+  }
+  .fonctionnement .fonctionnement-change-position {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .fonctionnement .small-card {
+    width: 322px;
+  }
 }
 
 /* Position chiffre sur small-card */
@@ -167,6 +190,13 @@ main {
   justify-content: center;
   background-color: #f6f6F6;
 }
+.restaurants .restaurants-change-position {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .restaurants .new-restaurant {
   display: flex;
   flex-direction: column;
@@ -177,8 +207,6 @@ main {
   font-size: 24px;
   font-weight: 700;
   width: 90%;
-  display: flex;
-  justify-content: flex-start;
 }
 .restaurants .big-card {
   width: 90%;
@@ -214,10 +242,29 @@ main {
 .restaurants .big-card .card-content h2 {
   font-size: 18px;
   font-weight: 700;
+  margin: 0 0 5px;
 }
 .restaurants .big-card .card-content p {
   font-size: 17px;
   font-weight: 300;
+  margin: 0;
+}
+@media screen and (min-width: 1075px) {
+  .restaurants .restaurant-title-desktop {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .restaurants .restaurants-change-position {
+    flex-direction: row;
+    gap: 100px;
+  }
+  .restaurants .big-card {
+    min-width: 340px;
+    max-width: 490px;
+  }
 }
 
 /* Position mention nouveau restaurant */
@@ -247,22 +294,67 @@ footer .footer-content {
   width: 89%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  margin: 22px;
+}
+footer .footer-desktop-reverse {
+  width: auto;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  padding: 22px;
+}
+footer .footer-content a {
+  width: auto;
+  max-width: 190px;
+}
+footer .footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .footer-content a svg {
+  padding-right: 10px;
 }
 footer h1 {
-  width: 70%;
   font-family: "Shrikhand";
   font-size: 18px;
   font-weight: 400;
   color: #ffffff;
 }
 footer a {
-  width: 70%;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
+  text-decoration: none;
+}
+@media screen and (min-width: 1075px) {
+  footer footer {
+    height: 54px;
+    padding: 30px 25px;
+  }
+  footer .footer-content h1 {
+    margin: 0;
+    padding: 0 20px 0 40px;
+  }
+  footer .footer-content {
+    width: 95%;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  footer .footer-desktop-reverse {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  footer .footer-link {
+    flex-direction: row;
+    padding: 0 35px 0 15px;
+  }
+  footer .footer-content a {
+    width: auto;
+    height: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
