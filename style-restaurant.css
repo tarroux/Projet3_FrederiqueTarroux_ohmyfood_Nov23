@@ -1,0 +1,244 @@
+/***** Import Family *****/
+/* Title Restaurant : Shrikhand */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Font Family All */
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/****************** All Parameter ******************/
+/***** All param *****/
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+main {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+/***** All Mixin *****/
+/* HEADER */
+/****************** Restaurants ******************/
+header {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header a {
+  width: 30px;
+  height: 30px;
+  padding-left: 17px;
+}
+header h1 {
+  width: 80%;
+  font-family: "Shrikhand";
+  font-size: 30px;
+  font-weight: 400;
+  color: #101010;
+  text-align: center;
+}
+
+.background-restaurant {
+  width: 100%;
+  height: 320px;
+  background-image: url(/Assets/Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+section {
+  position: absolute;
+  top: 42%;
+}
+
+section .menu {
+  display: block;
+}
+
+main {
+  background-color: white;
+}
+
+section {
+  width: 100%;
+  max-width: 1055px;
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .menu-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+section .title-restaurant {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+section h1 {
+  margin: 0;
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+}
+section .block-composition {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+section .block-composition h2 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+}
+section .block-composition h2::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  top: 18px;
+  left: 0;
+  border-bottom: 2px solid #99E2D0;
+}
+section .block-composition .card-menu {
+  width: 90%;
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 4px rgb(198, 196, 196);
+  color: #000000;
+}
+section .block-composition .card-menu h3,
+section .block-composition .card-menu p {
+  margin: 5px;
+}
+section .block-composition .card-menu .card-menu-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15.043px;
+}
+section .block-composition .card-menu .tarif {
+  color: #353535;
+  font-weight: 700;
+}
+section .button {
+  width: 186px;
+  height: 50px;
+  margin: 40px 20px;
+  border-radius: 25px;
+  background: linear-gradient(#ff79da, #9356DC);
+  color: white;
+  padding: 13px;
+  border: none;
+  transition: opacity 0.3s ease-in-out;
+}
+section .button:hover {
+  opacity: 0.5;
+}
+
+.menu {
+  min-height: 100%;
+  position: relative;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #353535;
+}
+footer .footer-content {
+  width: 89%;
+  display: flex;
+  flex-direction: column;
+  margin: 22px;
+}
+footer .footer-desktop-reverse {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .footer-content a {
+  width: auto;
+  max-width: 190px;
+}
+footer .footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .footer-content a svg {
+  padding-right: 10px;
+}
+footer h1 {
+  font-family: "Shrikhand";
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+footer a {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+@media screen and (min-width: 1075px) {
+  footer footer {
+    height: 54px;
+    padding: 30px 25px;
+  }
+  footer .footer-content h1 {
+    margin: 0;
+    padding: 0 20px 0 40px;
+  }
+  footer .footer-content {
+    width: 95%;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  footer .footer-desktop-reverse {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  footer .footer-link {
+    flex-direction: row;
+    padding: 0 35px 0 15px;
+  }
+  footer .footer-content a {
+    width: auto;
+    height: 20px;
+  }
+}
+
+/*# sourceMappingURL=style-restaurant.css.map */

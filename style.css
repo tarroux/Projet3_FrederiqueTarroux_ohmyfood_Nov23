@@ -83,14 +83,19 @@ header img {
   font-weight: 300;
   padding: 15px 15px;
 }
-.presentation button {
+.presentation a {
+  text-decoration: none;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(#ff79da, #9356DC);
   color: #ffffff;
   padding: 13px;
   border: none;
+  transition: opacity 0.3s ease-in-out;
   margin-bottom: 15px;
+}
+.presentation a:hover {
+  opacity: 0.5;
 }
 
 /* Section : Fonctionnement */
@@ -122,7 +127,7 @@ header img {
   border-radius: 20px;
   background-color: #f6f6F6;
   border: none;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 4px rgb(198, 196, 196);
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -207,20 +212,24 @@ header img {
   font-size: 24px;
   font-weight: 700;
   width: 90%;
+  text-decoration: none;
 }
-.restaurants .big-card {
+.restaurants a {
+  text-decoration: none;
+  color: #000000;
   width: 90%;
   height: 251px;
   border-radius: 15px;
+  box-shadow: 2px 2px 4px rgb(198, 196, 196);
   margin-bottom: 20px;
 }
-.restaurants .big-card img {
+.restaurants a img {
   width: 100%;
   height: 70%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.restaurants .big-card .new-restaurant {
+.restaurants a .new-restaurant {
   width: 80px;
   height: 29px;
   background-color: #99E2D0;
@@ -229,7 +238,7 @@ header img {
   font-weight: 500;
   border-radius: 2px;
 }
-.restaurants .big-card .card-content {
+.restaurants a .card-content {
   height: 20%;
   padding: 10px;
   background-color: #ffffff;
@@ -239,12 +248,12 @@ header img {
   align-items: center;
   justify-content: space-between;
 }
-.restaurants .big-card .card-content h2 {
+.restaurants a .card-content h2 {
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 5px;
 }
-.restaurants .big-card .card-content p {
+.restaurants a .card-content p {
   font-size: 17px;
   font-weight: 300;
   margin: 0;
