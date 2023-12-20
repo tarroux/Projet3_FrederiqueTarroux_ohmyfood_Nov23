@@ -48,16 +48,27 @@ header h1 {
 
 .background-restaurant {
   width: 100%;
-  height: 320px;
+  height: 310px;
   background-image: url(/Assets/Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
 }
+@media screen and (min-width: 1075px) {
+  .background-restaurant {
+    height: 340px;
+  }
+}
 
-section {
+.menu {
+  content: "";
   position: absolute;
-  top: 42%;
+  top: 35%;
+}
+@media screen and (min-width: 1075px) {
+  .menu {
+    top: 42%;
+  }
 }
 
 section .menu {
@@ -77,6 +88,10 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Like or dislike restaurant */
+  /* Position */
+  /* animation */
+  /* Block composition menu */
 }
 section .menu-content {
   width: 100%;
@@ -87,6 +102,7 @@ section .menu-content {
   gap: 40px;
 }
 section .title-restaurant {
+  width: 85%;
   margin-top: 24px;
   display: flex;
   flex-direction: row;
@@ -95,10 +111,50 @@ section .title-restaurant {
   gap: 24px;
 }
 section h1 {
+  width: 100%;
   margin: 0;
   font-family: "Shrikhand";
   font-size: 28px;
   font-weight: 400;
+}
+section .title-restaurant {
+  max-width: 300px;
+  position: relative;
+}
+section .like-or-dislike {
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  right: 0;
+}
+section .like {
+  width: 22px;
+  height: 21px;
+  opacity: 0;
+  position: absolute;
+  right: -24%;
+}
+section .dislike {
+  width: 22px;
+  height: 21px;
+  opacity: 1;
+  position: absolute;
+  right: -24%;
+}
+section .like-or-dislike:active .like {
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-name: Liked;
+  animation-duration: 3s;
+}
+@keyframes Liked {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 section .block-composition {
   width: 90%;
@@ -112,6 +168,8 @@ section .block-composition h2 {
   font-weight: 300;
   text-transform: uppercase;
   position: relative;
+  display: flex;
+  align-items: flex-start;
 }
 section .block-composition h2::after {
   content: "";
@@ -123,22 +181,72 @@ section .block-composition h2::after {
   border-bottom: 2px solid #99E2D0;
 }
 section .block-composition .card-menu {
-  width: 90%;
+  width: 95%;
+  height: 42px;
   padding: 15px;
+  padding-right: 0;
   background-color: white;
   border-radius: 20px;
   box-shadow: 2px 2px 4px rgb(198, 196, 196);
   color: #000000;
-}
-section .block-composition .card-menu h3,
-section .block-composition .card-menu p {
-  margin: 5px;
-}
-section .block-composition .card-menu .card-menu-content {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /*
+  .text-ellipsis {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }*/
+}
+section .block-composition .card-menu:hover .animate-choose-food {
+  width: 59px;
+  padding-right: 0;
+  transform: translateX(0);
+}
+section .block-composition .card-menu:not(:hover) .animate-choose-food {
+  width: 0px;
+}
+section .block-composition .card-menu .card-menu-all-content {
+  width: 100%;
+  height: 100%;
+  min-width: 100px;
+}
+section .block-composition .card-menu .card-tarif-content {
+  width: 99%;
+  height: 19px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   font-size: 15.043px;
+}
+section .block-composition .card-menu .animate-choose-food {
+  height: 72px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(63px);
+}
+section .block-composition .card-menu h3 {
+  margin: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+section .block-composition .card-menu p {
+  margin: 5px;
+  font-size: 15.043px;
+  font-weight: 300;
+}
+section .block-composition .card-menu span {
+  margin: 5px;
+}
+section .block-composition .card-menu .text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 section .block-composition .card-menu .tarif {
   color: #353535;
@@ -159,14 +267,25 @@ section .button:hover {
   opacity: 0.5;
 }
 
-.menu {
-  min-height: 100%;
-  position: relative;
+/* Position footer */
+footer {
+  position: absolute;
+  bottom: -97%;
+}
+@media screen and (min-width: 1075px) {
+  footer {
+    bottom: -88%;
+  }
 }
 
-#footer {
+.footer-note-enchantee {
   position: absolute;
-  bottom: 0;
+  bottom: -106%;
+}
+@media screen and (min-width: 1075px) {
+  .footer-note-enchantee {
+    bottom: -97%;
+  }
 }
 
 /* Footer */

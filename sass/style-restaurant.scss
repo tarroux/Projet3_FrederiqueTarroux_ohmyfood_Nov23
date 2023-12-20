@@ -58,20 +58,30 @@ header {
 
 .background-restaurant {
     width: 100%;
-    height: 320px;
+    height: 310px;
     background-image: url(/Assets/Images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size: cover;
     background-position: center;
+
     position: relative;
+
+    @media screen and (min-width: 1075px) {
+        height: 340px;
+    }
 }
 
-section {
+.menu {
+    content: "";
     position: absolute;
-    top: 42%;
+    top: 35%;
+    @media screen and (min-width: 1075px) {
+        top: 42%;
+    }
+
 }
 
 section .menu {
-    display: block;
+     display: block;
 }
 
 main {
@@ -89,6 +99,7 @@ section {
     align-items: center;
     justify-content: center;
 
+
     .menu-content {
         width: 100%;
         display: flex;
@@ -99,6 +110,7 @@ section {
     }
 
     .title-restaurant {
+        width: 85%;
         margin-top: 24px;
         display: flex;
         flex-direction: row;
@@ -108,12 +120,65 @@ section {
     }
     
     h1 {
+        width: 100%;
         margin: 0;
         font-family: "Shrikhand";
         font-size: 28px;
         font-weight: 400;
     }
+    /* Like or dislike restaurant */
+    /* Position */
+    .title-restaurant {
+        max-width: 300px;
+        position: relative;
+    }
+    
+    .like-or-dislike {
+        width: 22px;
+        height: 21px;
 
+        position: absolute;
+        right: 0;
+    }
+
+    .like {
+        width: 22px;
+        height: 21px;
+        opacity: 0;
+
+        position: absolute;
+        right: -24%;
+    } 
+
+    .dislike {
+        width: 22px;
+        height: 21px;
+        opacity: 1;
+
+        position: absolute;
+        right: -24%;
+    }
+
+    /* animation */
+    .like-or-dislike:active .like {
+        animation-direction: alternate-reverse;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-name: Liked;
+        animation-duration: 3s;
+    }
+
+    @keyframes Liked {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* Block composition menu */
+    
     .block-composition {
         width: 90%;
         display: flex;
@@ -126,6 +191,8 @@ section {
             font-weight: 300;
             text-transform: uppercase;
             position: relative;
+            display: flex;
+            align-items: flex-start;
         }
 
         h2::after {
@@ -140,25 +207,90 @@ section {
         }
 
         .card-menu {
-            width: 90%;
+            width: 95%;
+            height: 42px;
             padding: 15px;
+            padding-right: 0;
+
             background-color: white;
             border-radius: 20px;
             box-shadow: 2px 2px 4px rgb(198, 196, 196);
             color: #000000;
 
-            h3,
-            p {
-                margin: 5px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            
+            
+            &:hover .animate-choose-food {
+                width: 59px;
+                padding-right: 0;
+                transform: translateX(0);
+                // transition: transform .3s ease-in-out;
             }
 
-            .card-menu-content {
+            &:not(:hover) .animate-choose-food {
+                width: 0px;
+                // transition: width .3s ease-in-out;
+            }
+
+            .card-menu-all-content {
+                width: 100%;
+                height: 100%;
+                min-width: 100px;
+            }
+            /*
+            .text-ellipsis {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }*/
+
+            .card-tarif-content {
+                width: 99%;
+                height: 19px;
                 display: flex;
                 flex-direction: row;
+                align-items: center;
                 justify-content: space-between;
                 font-size: 15.043px;
             }
+
+            .animate-choose-food {
+                height: 72px;
+                border-radius: 0 15px 15px 0;
+                background-color: #99E2D0;
+
+                transition: transform .4s ease-in-out;
+                transform: translateX(63px);
+            }
+
             
+            h3 {
+                margin: 5px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            p {
+                margin: 5px;
+                font-size: 15.043px;
+                font-weight: 300;
+            }
+
+            span {
+                margin: 5px;
+            }
+
+            .text-ellipsis {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
             .tarif {
                 color: #353535;
                 font-weight: 700;
@@ -182,14 +314,21 @@ section {
     }
 }
 
-.menu {
-    min-height: 100%;
-    position: relative;
+/* Position footer */
+footer {
+    position: absolute;
+    bottom: -97%;
+    @media screen and (min-width: 1075px) {
+    bottom: -88%;
+    }
 }
 
-#footer {
+.footer-note-enchantee {
     position: absolute;
-    bottom: 0;
+    bottom: -106%;
+    @media screen and (min-width: 1075px) {
+        bottom: -97%;
+        }
 }
 
 /* Footer */

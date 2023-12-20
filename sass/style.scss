@@ -118,7 +118,7 @@ $badge-green:  #99E2D0;
 }
 
 @mixin big-card {
-    width: 90%;
+    width: 100%;
     height: 251px;
     border-radius: 15px;
     box-shadow: 2px 2px 4px rgb(198, 196, 196);
@@ -161,7 +161,7 @@ $badge-green:  #99E2D0;
             font-weight: 300;
             margin: 0;
         }
-        
+
     }
 
 }
@@ -299,6 +299,10 @@ header img {
         text-decoration: none;
     }
 
+    .card-restaurant {
+        width: 88%;
+    }
+
     a {
         text-decoration: none;
         color: #000000;
@@ -321,7 +325,8 @@ header img {
             gap: 100px;
         }
 
-        .big-card {
+        .big-card,
+        .card-restaurant {
             min-width: 340px;
             max-width: 490px;
         }
@@ -345,6 +350,27 @@ header img {
     top: 5%;
     right: 5%;
 }
+
+/* Position like sur card-restaurant */
+.card-restaurant {
+    position: relative;
+}
+
+.like {
+    content: url(/Assets/Images/svg/Status=Status3.svg);
+    position: absolute;
+    right: 10px;
+    bottom: 30px;
+}
+
+.like:active {
+    content: url(/Assets/Images/svg/Status=Liked.svg);
+}
+
+.like-container {
+    display: block;
+}
+
 
 /* Footer */
 footer {
