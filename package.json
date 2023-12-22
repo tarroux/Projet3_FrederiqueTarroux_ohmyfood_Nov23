@@ -1,0 +1,14 @@
+{
+  "name": "projet3_frederiquetarroux_ohmyfood_nov23",
+  "version": "1.0.0",
+  "description": "Dynamisez une page web avec des animations CSS",
+  "main": "index.js",
+  "scripts": {
+    "res": "sass sass/style-restaurant.scss:style-restaurant.css --no-source-map -w",
+    "start": "sass sass/style.scss:main.css --no-source-map -w",
+    "compile": "sass sass/style.scss:main.css --no-source-map"
+  },
+  "author": "fred",
+  "license": "ISC"
+  
+}

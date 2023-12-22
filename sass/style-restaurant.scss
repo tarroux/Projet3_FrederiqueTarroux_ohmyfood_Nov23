@@ -223,18 +223,19 @@ section {
             align-items: center;
             justify-content: space-between;
 
-            
+            .animate-choose-food {
+                height: 72px;
+                border-radius: 0 15px 15px 0;
+                width: 0;
+                // transition: transform 0.8s, width 0.7s ease-in-out;
+                transition: all 0.8s ease-in-out;
+                transform: translateX(63px);
+            }
             
             &:hover .animate-choose-food {
+                transform: translateX(0px);
                 width: 59px;
-                padding-right: 0;
-                transform: translateX(0);
-                // transition: transform .3s ease-in-out;
-            }
-
-            &:not(:hover) .animate-choose-food {
-                width: 0px;
-                // transition: width .3s ease-in-out;
+                
             }
 
             .card-menu-all-content {
@@ -242,13 +243,6 @@ section {
                 height: 100%;
                 min-width: 100px;
             }
-            /*
-            .text-ellipsis {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }*/
-
             .card-tarif-content {
                 width: 99%;
                 height: 19px;
@@ -258,16 +252,6 @@ section {
                 justify-content: space-between;
                 font-size: 15.043px;
             }
-
-            .animate-choose-food {
-                height: 72px;
-                border-radius: 0 15px 15px 0;
-                background-color: #99E2D0;
-
-                transition: transform .4s ease-in-out;
-                transform: translateX(63px);
-            }
-
             
             h3 {
                 margin: 5px;

@@ -194,20 +194,17 @@ section .block-composition .card-menu {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /*
-  .text-ellipsis {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-  }*/
+}
+section .block-composition .card-menu .animate-choose-food {
+  height: 72px;
+  border-radius: 0 15px 15px 0;
+  width: 0;
+  transition: all 0.8s ease-in-out;
+  transform: translateX(63px);
 }
 section .block-composition .card-menu:hover .animate-choose-food {
+  transform: translateX(0px);
   width: 59px;
-  padding-right: 0;
-  transform: translateX(0);
-}
-section .block-composition .card-menu:not(:hover) .animate-choose-food {
-  width: 0px;
 }
 section .block-composition .card-menu .card-menu-all-content {
   width: 100%;
@@ -222,13 +219,6 @@ section .block-composition .card-menu .card-tarif-content {
   align-items: center;
   justify-content: space-between;
   font-size: 15.043px;
-}
-section .block-composition .card-menu .animate-choose-food {
-  height: 72px;
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-  transition: transform 0.4s ease-in-out;
-  transform: translateX(63px);
 }
 section .block-composition .card-menu h3 {
   margin: 5px;
@@ -359,5 +349,3 @@ footer a {
     height: 20px;
   }
 }
-
-/*# sourceMappingURL=style-restaurant.css.map */
