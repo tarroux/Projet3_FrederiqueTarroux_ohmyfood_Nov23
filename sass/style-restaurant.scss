@@ -227,15 +227,16 @@ section {
                 height: 72px;
                 border-radius: 0 15px 15px 0;
                 width: 0;
-                // transition: transform 0.8s, width 0.7s ease-in-out;
-                transition: all 0.8s ease-in-out;
+                object-fit: cover;
+                transition: transform 0.8s, width 0.8s ease-in-out;
+                //transition: all 0.8s ease-in-out;
                 transform: translateX(63px);
             }
             
             &:hover .animate-choose-food {
                 transform: translateX(0px);
                 width: 59px;
-                
+                height: 72px;
             }
 
             .card-menu-all-content {
