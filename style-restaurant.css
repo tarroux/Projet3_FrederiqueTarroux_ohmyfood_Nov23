@@ -206,7 +206,6 @@ section .block-composition .card-menu .animate-choose-food {
 section .block-composition .card-menu:hover .animate-choose-food {
   transform: translateX(0px);
   width: 59px;
-  height: 72px;
 }
 section .block-composition .card-menu .card-menu-all-content {
   width: 100%;
