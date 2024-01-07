@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style-restaurant.css">
+    <link rel="stylesheet" href="/styles.css">
     <title>À la française</title>
 </head>
 <body>
     <header class="header-page-restaurant">
-        <a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <a href="/ohmyfood.html"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
             <path d="M15.8856 21.9283L15.0335 22.7417C14.6727 23.0861 14.0892 23.0861 13.7323 22.7417L6.2706 15.6229C5.9098 15.2785 5.9098 14.7215 6.2706 14.3808L13.7323 7.2583C14.0931 6.9139 14.6765 6.9139 15.0335 7.2583L15.8856 8.07167C16.2502 8.41974 16.2425 8.98763 15.8702 9.32837L11.2451 13.5345H22.2764C22.7869 13.5345 23.1976 13.9265 23.1976 14.4138V15.5862C23.1976 16.0735 22.7869 16.4655 22.2764 16.4655H11.2451L15.8702 20.6716C16.2464 21.0124 16.254 21.5803 15.8856 21.9283Z" fill="#353535"/>
             </svg>
         </a>
@@ -20,14 +20,14 @@
             <div class="menu-content">
                 <div class="title-restaurant">
                     <h1>À la française</h1>
-                    <a class="like-or-dislike">
-                        <div class="like"><img src="/Assets/Images/svg/Status=Liked.svg" alt="aimer le restaurant"></div>
-                        <div class="dislike"><img src="/Assets/Images/svg/Status=Status3.svg" alt="n'aime pas le restaurant"></div>
-                    </a>
+                    <div class="like-container">
+                        <input class="like-element" type="checkbox" name="likeORdislike" id="liked">
+                        <label for="liked" class="label-restaurant"></label>
+                    </div>
                 </div>
                 <div class="block-composition">
-                    <h2>ENTRÉES</h2>
-                    <div class="card-menu">
+                    <h2 class="bc1">ENTRÉES</h2>
+                    <div class="card-menu bc2">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Tartare de poulpe acidulé</h3>
                             <div class="card-tarif-content">
@@ -37,7 +37,7 @@
                         </div>
                         <img class="animate-choose-food" src="/Assets/Images/svg/SelectButton.svg" alt="image signalant la validation du menu">
                     </div>
-                    <div class="card-menu">
+                    <div class="card-menu bc3">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Velouté de légumes d'antan</h3>
                             <div class="card-tarif-content">
@@ -47,7 +47,7 @@
                         </div>
                         <img class="animate-choose-food" src="/Assets/Images/svg/SelectButton.svg" alt="image signalant la validation du menu">
                     </div>
-                    <div class="card-menu">
+                    <div class="card-menu bc4">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Soupe à l'oignon</h3>
                             <div class="card-tarif-content">
@@ -59,8 +59,8 @@
                     </div>
                 </div>
                 <div class="block-composition">
-                    <h2>PLATS</h2>
-                    <div class="card-menu">
+                    <h2 class="bc5">PLATS</h2>
+                    <div class="card-menu bc6">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Coquilles Saint-Jacques</h3>
                             <div class="card-tarif-content">
@@ -70,7 +70,7 @@
                         </div>
                         <img class="animate-choose-food" src="/Assets/Images/svg/SelectButton.svg" alt="image signalant la validation du menu">
                     </div>
-                    <div class="card-menu">
+                    <div class="card-menu bc7">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Magret de canard</h3>
                             <div class="card-tarif-content">
@@ -80,7 +80,7 @@
                         </div>
                         <img class="animate-choose-food" src="/Assets/Images/svg/SelectButton.svg" alt="image signalant la validation du menu">
                     </div>
-                    <div class="card-menu">
+                    <div class="card-menu bc8">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Pigeonneau d’Ille-et-Vilaine</h3>
                             <div class="card-tarif-content">
@@ -92,8 +92,8 @@
                     </div>
                 </div>
                 <div class="block-composition">
-                    <h2>DESSERTS</h2>
-                    <div class="card-menu">
+                    <h2 class="bc9">DESSERTS</h2>
+                    <div class="card-menu bc10">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Pétales de violettes glacés</h3>
                             <div class="card-tarif-content">
@@ -103,7 +103,7 @@
                         </div>
                         <img class="animate-choose-food" src="/Assets/Images/svg/SelectButton.svg" alt="image signalant la validation du menu">
                     </div>
-                    <div class="card-menu">
+                    <div class="card-menu bc11">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Fondant au chocolat</h3>
                             <div class="card-tarif-content">
@@ -113,7 +113,7 @@
                         </div>
                         <img class="animate-choose-food" src="/Assets/Images/svg/SelectButton.svg" alt="image signalant la validation du menu">
                     </div>
-                    <div class="card-menu">
+                    <div class="card-menu bc12">
                         <div class="card-menu-all-content">
                             <h3 class="text-ellipsis">Millefeuille croustillant</h3>
                             <div class="card-tarif-content">

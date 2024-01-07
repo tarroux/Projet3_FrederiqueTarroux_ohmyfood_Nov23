@@ -6,6 +6,7 @@
   "scripts": {
     "res": "sass sass/style-restaurant.scss:style-restaurant.css --no-source-map -w",
     "start": "sass sass/style.scss:main.css --no-source-map -w",
+    "new": "sass sass/styles.css:styles.css --no-source-map -w",
     "compile": "sass sass/style.scss:main.css --no-source-map"
   },
   "author": "fred",
